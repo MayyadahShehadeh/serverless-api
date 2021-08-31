@@ -5,12 +5,15 @@
 
 ### the routes:
 * /GET 
+   * /people
  > to get all data
 
 * /GET/{id} 
+  * /people/{id}
 > to get specific data according to its id.
 
 * /POST 
+  * /people
 > to create ne data
   
   **return objects:**
@@ -22,8 +25,10 @@
 </code>
 
 * /put/{id}
+  * /people/{id}
 > to update exist data according to its id
 
 * /delete/{id}
+  * /people/{id}
 > to delete data according to its id
 
