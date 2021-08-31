@@ -1,11 +1,11 @@
 const uuid = require('uuid').v4;
-const peopleSchema = require('../people-schema');
+const peopleSchema = require('./people-schema');
 
 exports.handler = async(event)=> {
    try {
         const {name, age} = JSON.parse(event.body);
         const id = uuid();
-        let obj = new FoodSchema({id, name, age});
+        let obj = new peopleSchema({id, name, age});
         let newObject = await obj.save();
        
         return {

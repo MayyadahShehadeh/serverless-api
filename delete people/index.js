@@ -5,7 +5,7 @@ exports.handler = async (event) => {
         const id = event.pathParameters ? event.pathParameters.id : null;
         let result = null;
         if (id) {
-            await peopleSchema.delete({ id });
+            await peopleSchema.delete({ id :id});
         }
         return {
             statusCode: 200,

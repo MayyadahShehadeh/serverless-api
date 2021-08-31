@@ -3,15 +3,14 @@ const peopleSchema = require('../people-schema');
 exports.handler = async(event)=> {
    try {
         const id = event.pathParameters ? event.pathParameters.id : null;
-        let result = null;
-        
+         
         if (id) {
             // get specific info for only this id
-            result = await foodSchema.query('id').eq(id).exec();
+            result = await peopleSchema.query('id').eq(id).exec();
             result = result[0];
         } else {
             //get all objects
-            result = await foodSchema.scan().exec();
+            result = await peopleSchema.scan().exec();
         }
 
         return {
