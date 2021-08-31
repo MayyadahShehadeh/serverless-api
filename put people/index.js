@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     const id = event.pathParameters ? event.pathParameters.id : null;
     const { name, age } = JSON.parse(event.body);
 
-    const result = await peopleSchema.update({ id }, { name, age });
+    const result = await peopleSchema.update({ id: id } ,{ name, age });
     return {
       statusCode: 200,
       body: JSON.stringify(result),
